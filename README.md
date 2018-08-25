@@ -1,2 +1,3 @@
-# mymp
-The write up collections
+# My Writeup
+
+This is the collection of the CTF I have tried!
