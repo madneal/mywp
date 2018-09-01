@@ -1,6 +1,9 @@
 from struct import pack
+
+
 def p32(i):
     return pack("<i", i)
+
 
 def string(d, fout):
     l = len(d)
@@ -13,6 +16,7 @@ def string(d, fout):
     l = p32(l)
     fout.write(l)
     fout.write(d)
+
 
 def tumple(d, fout):
     l = p32(len(d))
@@ -137,10 +141,11 @@ def analyse(kind, i, fout):
     return i
 
 
-if __name__=="__main__":
+if __name__ == '__main__':
     fout = open("output.pyc", "wb")
-    with open("re.txt","r", encoding='utf-8') as f:
+    with open("re1.txt","r", encoding='utf-8') as f:
         data = f.readlines()
+        # print(data)
         # data = f.read().replace("\x00", "").split("\n\n")
     for i in range(len(data)):
         data[i] = data[i].strip()

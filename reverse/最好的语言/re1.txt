@@ -2,9 +2,9 @@ magic 03f30d0a
 moddate 6d4a695b (Tue Aug  7 15:29:49 2018)
 <code>
    <argcount> 0 </argcount>
-   <nlocals> 0</nlocals>
-   <stacksize> 5</stacksize>
-   <flags> 0040</flags>
+   <nlocals> 0 </nlocals>
+   <stacksize> 5 </stacksize>
+   <flags> 0040 </flags>
    <code>
       6400006401006c00005a00006400006402006c01006d02005a0200016400
       006401006c03005a03006400006401006c04005a04006403005a05006404
