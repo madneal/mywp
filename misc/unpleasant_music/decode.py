@@ -3,25 +3,25 @@ import numpy as np
  
 wavfile =  we.open(u'music.wav',"rb")
 params = wavfile.getparams()
-framesra,frameswav= params[2],params[3]
+framesra, frameswav= params[2], params[3]
 datawav = wavfile.readframes(frameswav)
 wavfile.close()
 datause = np.fromstring(datawav,dtype = np.short)
  
-result_bin=''
-result_hex=''
-max=0
+result_bin = ''
+result_hex = ''
+flag = 0
 for i in range(len(datause)-1):
-    if datause[i]> max:
-        max=datause[i]
+    if datause[i] > flag:
+        flag = datause[i]
     try:
-        if(datause[i]<0 and datause[i+1]>=0):
-            if (max-24000 >0):
-                result_bin+='1'
-                max=datause[i+1]
+        if datause[i] < 0 and datause[i+1] >= 0:
+            if flag > 20000:
+                result_bin += '1'
+                flag = datause[i+1]
             else:
-                result_bin+='0'
-                max=datause[i+1]
+                result_bin += '0'
+                flag = datause[i+1]
     except:
         break
  
