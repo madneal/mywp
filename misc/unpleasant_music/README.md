@@ -11,3 +11,5 @@
 通过脚本可以将 wav 文件转化为 rar 文件，打开 rar 文件可以看到里面有一个 nnnnoflag.txt，里面也是没有 flag 的。使用 010 editor 打开 rar 文件，
 
 [![ipNXAf.png](https://s1.ax1x.com/2018/09/05/ipNXAf.png)](https://imgchr.com/i/ipNXAf)
+
+可以看到 rar 的块类型不对，应该把 0x7A 改为 0x74。保存后，可以发现 rar 里面多了一个 STM 文件，将其解压出来，怎加后缀 png。可以看到这是一个
