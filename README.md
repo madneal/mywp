@@ -1,12 +1,16 @@
 # My Writeup
 
 This is the collection of the CTF I have tried!
+<!-- TOC -->
 
-* [Crypt](## Crypt)
-* [Misc](## Misc)
-* [Pwn](## Pwn)
-* [Reverse](## Reverse)
-* [Web](## Web)
+- [My Writeup](#my-writeup)
+    - [Crypt](#crypt)
+    - [Misc](#misc)
+    - [Pwn](#pwn)
+    - [Reverse](#reverse)
+    - [Web](#web)
+
+<!-- /TOC -->
 
 ## Crypt
 
