@@ -15,9 +15,10 @@ This is the collection of the CTF I have tried!
 
 ## Crypt
 
-* [hafuhdfu](https://github.com/neal1991/mywp/crypt/hafuhafu/REDAME.md)
-* [not only base](https://github.com/neal1991/mywp/crypt/not_only_base/REDAME.md))
-* [tack hacker](https://github.com/neal1991/mywp/crypt/track_hacker/REDAME.md))
+* [hafuhafu](https://github.com/neal1991/mywp/crypt/hafuhafu/REDAME.md)
+* [not only base](https://github.com/neal1991/mywp/crypt/not_only_base/REDAME.md)
+* [tack hacker](https://github.com/neal1991/mywp/crypt/track_hacker/REDAME.md)
+
 ## Misc
 
 ## Pwn
