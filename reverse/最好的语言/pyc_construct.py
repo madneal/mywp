@@ -1,9 +1,6 @@
 from struct import pack
-
-
 def p32(i):
     return pack("<i", i)
-
 
 def string(d, fout):
     l = len(d)
@@ -16,7 +13,6 @@ def string(d, fout):
     l = p32(l)
     fout.write(l)
     fout.write(d)
-
 
 def tumple(d, fout):
     l = p32(len(d))
@@ -92,9 +88,9 @@ def analyse(kind, i, fout):
     if(kind=="co_code"):
         if(len(data[i].split(' '))==1):
             s = ""
-            while(data[i]!="consts"):
-                i += 1
+            while i < len(data) and data[i]!="consts":
                 s += data[i]
+                i += 1
             s = s.replace("consts", "")
         else:
             s = data[i].split(" ")[1]
@@ -102,7 +98,8 @@ def analyse(kind, i, fout):
         try:
             s = bytes.fromhex(s)
         except:
-            s = bytes.fromhex("0"+s)
+            print(s)
+            # s = bytes.fromhex("0"+s)
         string(s, fout)
         i += 1
     if(kind=="consts"):
@@ -141,11 +138,11 @@ def analyse(kind, i, fout):
     return i
 
 
-if __name__ == '__main__':
+if(__name__=="__main__"):
     fout = open("output.pyc", "wb")
-    with open("re1.txt","r", encoding='utf-8') as f:
+    with open("opcode.txt","r", encoding='utf-8') as f:
         data = f.readlines()
-        # print(data)
+        # utf-8格式的opcode使用下述语句解析，因为showfile重定向的结果出来是utf-8格式的orz
         # data = f.read().replace("\x00", "").split("\n\n")
     for i in range(len(data)):
         data[i] = data[i].strip()
